@@ -5,6 +5,7 @@ namespace Fitness.BL.Model
     /// <summary>
     /// User
     /// </summary>
+    [Serializable]
     internal class User
     {
         #region Param

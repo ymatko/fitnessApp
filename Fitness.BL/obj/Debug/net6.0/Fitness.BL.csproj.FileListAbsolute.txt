@@ -1,0 +1,12 @@
+C:\Users\n246v\Desktop\C#\FitnessApp\Fitness.BL\bin\Debug\net6.0\Fitness.BL.deps.json
+C:\Users\n246v\Desktop\C#\FitnessApp\Fitness.BL\bin\Debug\net6.0\Fitness.BL.dll
+C:\Users\n246v\Desktop\C#\FitnessApp\Fitness.BL\bin\Debug\net6.0\Fitness.BL.pdb
+C:\Users\n246v\Desktop\C#\FitnessApp\Fitness.BL\obj\Debug\net6.0\Fitness.BL.csproj.AssemblyReference.cache
+C:\Users\n246v\Desktop\C#\FitnessApp\Fitness.BL\obj\Debug\net6.0\Fitness.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\n246v\Desktop\C#\FitnessApp\Fitness.BL\obj\Debug\net6.0\Fitness.BL.AssemblyInfoInputs.cache
+C:\Users\n246v\Desktop\C#\FitnessApp\Fitness.BL\obj\Debug\net6.0\Fitness.BL.AssemblyInfo.cs
+C:\Users\n246v\Desktop\C#\FitnessApp\Fitness.BL\obj\Debug\net6.0\Fitness.BL.csproj.CoreCompileInputs.cache
+C:\Users\n246v\Desktop\C#\FitnessApp\Fitness.BL\obj\Debug\net6.0\Fitness.BL.dll
+C:\Users\n246v\Desktop\C#\FitnessApp\Fitness.BL\obj\Debug\net6.0\refint\Fitness.BL.dll
+C:\Users\n246v\Desktop\C#\FitnessApp\Fitness.BL\obj\Debug\net6.0\Fitness.BL.pdb
+C:\Users\n246v\Desktop\C#\FitnessApp\Fitness.BL\obj\Debug\net6.0\ref\Fitness.BL.dll
