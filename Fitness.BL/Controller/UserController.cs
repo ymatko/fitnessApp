@@ -1,13 +1,14 @@
 ﻿using Fitness.BL.Model;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Fitness.BL.Controller
 {
     /// <summary>
     /// User controller
     /// </summary>
-    internal class UserController
+    public class UserController
     {
         /// <summary>
         /// User
@@ -43,7 +44,8 @@ namespace Fitness.BL.Controller
         public void Save()
         {
             var formatter = new BinaryFormatter();
-            using(var fs = new FileStream("users.dat", FileMode.OpenOrCreate))
+
+            using (var fs = new FileStream("users.dat", FileMode.OpenOrCreate))
             {
                 formatter.Serialize(fs, User);
             }
