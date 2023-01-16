@@ -26,7 +26,7 @@ namespace Fitness.BL.Controller
             {
                 throw new ArgumentNullException("Username cannot be empty or null", nameof(userName));
             }
-            Users = GetUsersDate();
+            Users = GetUsersData();
             CurrentUser = Users.SingleOrDefault(u => u.Name == userName);
 
             if(CurrentUser == null)
@@ -41,13 +41,13 @@ namespace Fitness.BL.Controller
         /// Get user data
         /// </summary>
         /// <returns> User </returns>
-        private List<User> GetUsersDate()
+        private List<User> GetUsersData()
         {
             var formatter = new BinaryFormatter();
 
             using (var fs = new FileStream("users.dat", FileMode.OpenOrCreate))
             {
-                if (formatter.Deserialize(fs) is List<User> users)
+                if (fs.Length > 0 && formatter.Deserialize(fs) is List<User> users)
                 {
                     return users;
                 }

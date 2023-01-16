@@ -16,7 +16,7 @@ namespace Fitness.CMD
             {
                 Console.WriteLine("Enter gender: ");
                 var gender = Console.ReadLine();
-                DateTime birthDate = ParseDateTime();
+                var birthDate = ParseDateTime();
                 double weight = ParseDouble("weight");
                 double height = ParseDouble("height");
 
@@ -24,6 +24,7 @@ namespace Fitness.CMD
 
             }
             Console.WriteLine(userController.CurrentUser);
+            Console.ReadLine();
         }
 
         private static DateTime ParseDateTime()
@@ -31,7 +32,7 @@ namespace Fitness.CMD
             DateTime birthDate;
             while (true)
             {
-                Console.Write("Enter date of birth (dd.mm.yyyy): ");
+                Console.Write("Enter date of birth (MM.dd.yyyy): ");
                 if (DateTime.TryParse(Console.ReadLine(), out birthDate))
                 {
                     break;
