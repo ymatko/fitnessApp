@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "GyHNkUlKeYXizc9n2F4iX38IQLHidEx9fqaLemfyRQyaDNYLyidhclFSwxJrP+SFkubcCbdrMqPzJB1UufXyag==",
+  "dgSpecHash": "G0nNJZHQ3RWUIppHJl1V34TxXiVY8K+rqp/0pzgZa2eLYBiPyF21ug+nI5Af9WLQxXuo29GQU4Hnrt7/w9wWPg==",
   "success": true,
   "projectFilePath": "C:\\Users\\n246v\\Desktop\\C#\\FitnessApp\\Fitness.CMD\\Fitness.CMD.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\n246v\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

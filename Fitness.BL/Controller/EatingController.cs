@@ -8,32 +8,51 @@ using System.Threading.Tasks;
 
 namespace Fitness.BL.Controller
 {
-    public class EatingController
+    public class EatingController : ControllerBase
     {
+        private const string FOODS_FILE_NAME = "foods.dat";
+        private const string EATINGS_FILE_NAME = "eatings.dat";
+
         private readonly User user;
         public List<Food> Foods { get; }
+        public Eating Eating { get; }
         public EatingController(User user)
         {
             this.user = user ?? throw new ArgumentNullException("User cannot be empty or null", nameof(user));
             Foods = GetAllFoods();
+            Eating = GetEating();
 
         }
-
-        private List<Food>? GetAllFoods()
+        public void Add(Food food, double weight)
         {
-            var formatter = new BinaryFormatter();
-
-            using (var fs = new FileStream("foods.dat", FileMode.OpenOrCreate))
+            var product = Foods.SingleOrDefault(f => f.Name == food.Name);
+            if (product == null)
             {
-                if (fs.Length > 0 && formatter.Deserialize(fs) is List<Food> foods)
-                {
-                    return foods;
-                }
-                else
-                {
-                    return new List<Food>();
-                }
+                Foods.Add(food);
+                Eating.Add(food, weight);
+                Save();
             }
+            else
+            {
+                Eating.Add(product, weight);
+                Save();
+            }
+        }
+
+        private Eating GetEating()
+        {
+            return Load<Eating>(EATINGS_FILE_NAME) ?? new Eating(user);
+        }
+
+        private List<Food> GetAllFoods()
+        {
+            return Load<List<Food>>(FOODS_FILE_NAME) ?? new List<Food>();
+        }
+
+        private void Save()
+        {
+            Save(FOODS_FILE_NAME, Foods);
+            Save(EATINGS_FILE_NAME, Eating);
         }
     }
 }

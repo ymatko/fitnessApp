@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fitness.BL.Model
 {
+    [Serializable]
     public class Eating
     {
         public DateTime Moment { get; }
